@@ -1,6 +1,7 @@
 /* 
 	Author:	Petr G. 
 */
+
 #include "logic.h"
 
 int main() 
