@@ -219,7 +219,7 @@ void Crossing::inputdata()
 			if(cross == '8')
 			{	
 				// варианты скрещиваний для ВОСЬМЫХ пеленок	
-				silica_8();	// силища
+				silica_8();		// силища
 				freeday_8();	// свободный
 				break;
 			}
