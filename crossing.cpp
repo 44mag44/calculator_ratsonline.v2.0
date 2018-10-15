@@ -248,5 +248,4 @@ void Crossing::inputdata()
 	}
 
 }
-
 #endif
