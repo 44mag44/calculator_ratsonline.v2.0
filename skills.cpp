@@ -4,28 +4,28 @@
 #include "skills.h"
 
 ////////////////////////////////////////////////////////////////////////////////
-/*									Конструктор								  */
+/*				Конструктор				      */
 ////////////////////////////////////////////////////////////////////////////////
 Skills::Skills()
 {
-	point			= 0;	// ввод умений для одной крысы
-	rats			= 0;	// ввод кол-ва крыс
-	result			= 0;	// кол-во очков умений
-	sumpoints		= 0;	// сумма очков умений	
-	armor			= 0;	// Нужно защита
-	skills			= 0;	// Нужно воровство/атака			
-	sumarmor		= 0;	// Получится защиты
-	sumskills		= 0;	// Получится воровство/атакая
+	point		= 0;	// ввод умений для одной крысы
+	rats		= 0;	// ввод кол-ва крыс
+	result		= 0;	// кол-во очков умений
+	sumpoints	= 0;	// сумма очков умений	
+	armor		= 0;	// Нужно защита
+	skills		= 0;	// Нужно воровство/атака			
+	sumarmor	= 0;	// Получится защиты
+	sumskills	= 0;	// Получится воровство/атакая
 	salesumpoints	= 0;	// сумма очков умений (АКЦИЯ)
-	salearmor		= 0;	// Нужно защита (АКЦИЯ)
+	salearmor	= 0;	// Нужно защита (АКЦИЯ)
 	salesumarmor	= 0;	// Получится защиты (АКЦИЯ)
-	saleskills		= 0;	// Нужно воровство/атака (АКЦИЯ)			
+	saleskills	= 0;	// Нужно воровство/атака (АКЦИЯ)			
 	salesumskills	= 0;	// Получится воровство/атакая (АКЦИЯ)
 
 	fout.open("save_Skills_Rats", ios_base::out|ios_base::in|ios_base::trunc);
 }
 ////////////////////////////////////////////////////////////////////////////////
-/*									Ввод данных								  */
+/*				Ввод данных				      */
 ////////////////////////////////////////////////////////////////////////////////
 int Skills::cininfo()
 {
@@ -55,14 +55,14 @@ int Skills::cininfo()
 }
 
 ////////////////////////////////////////////////////////////////////////////////
-/*								 УНИВЕРСАЛЬНАЯ								  */ 
+/*				УНИВЕРСАЛЬНАЯ				      */ 
 ////////////////////////////////////////////////////////////////////////////////
 void Skills::four_skills()
 {
 	result = 0; // очищаем от предыдущих значений	
 
 	for(int i=0; i<=point; i++)	// цикл суммирования 1+2+3+4+5...
-		result+=i;				// Потрачено навыка за 1-ну прокачку	
+		result+=i;		// Потрачено навыка за 1-ну прокачку	
 	
 	sumpoints	= result*rats;		// сумма очков
 	armor		= sumpoints/4;		// нужно для 1-го навыка
@@ -88,7 +88,7 @@ void Skills::show_four() // SHOW
 	fout << "Итого по > \t" << sumarmor << endl;
 }
 
-					// В АКЦИЮ "Крысы на прокачку" //
+			// В АКЦИЮ "Крысы на прокачку" //
 void Skills::four_skills_discount() 
 {
 	result = 0; // очищаем от предыдущих значений
@@ -100,9 +100,9 @@ void Skills::four_skills_discount()
 		result+=sum/2;
 	}
 
-	salesumpoints	= result*rats;			// сумма очков
-	salearmor		= salesumpoints/4;		// нужно для 1-го навыка
-	salesumarmor	= (rats*point)/4;		// получится для 1-го навыка
+	salesumpoints	= result*rats;		// сумма очков
+	salearmor	= salesumpoints/4;	// нужно для 1-го навыка
+	salesumarmor	= (rats*point)/4;	// получится для 1-го навыка
 }
 void Skills::show_four_discount() // SHOW
 {
@@ -121,19 +121,19 @@ void Skills::show_four_discount() // SHOW
 }
 
 ////////////////////////////////////////////////////////////////////////////////
-/*								 	АЛЬТЕРНАТИВНЫЙ							  */ 
+/*			 	АЛЬТЕРНАТИВНЫЙ				      */ 
 ////////////////////////////////////////////////////////////////////////////////
 void Skills::alternative()
 {
 	result = 0; // очищаем от предыдущих значений	
 
 	for(int i=0; i<=point; i++)	// цикл суммирования 1+2+3+4+5...
-		result+=i;				// Потрачено навыка за 1-ну прокачку	
+		result+=i;		// Потрачено навыка за 1-ну прокачку	
 	
-	sumpoints	= result*rats;			// сумма очков
-	armor		= sumpoints/4;			// нужно для 1-го навыка
-	skills		= (sumpoints/4)*3;		// нужно для 4-х навыков
-	sumarmor	= (rats*point)/4;		// получится для 1-го навыка
+	sumpoints	= result*rats;		// сумма очков
+	armor		= sumpoints/4;		// нужно для 1-го навыка
+	skills		= (sumpoints/4)*3;	// нужно для 4-х навыков
+	sumarmor	= (rats*point)/4;	// получится для 1-го навыка
 	sumskills	= ((rats*point)/4)*3;	// получится для 4-х навыков
 }
 void Skills::show_alternative() // SHOW
@@ -166,10 +166,10 @@ void Skills::alternative_discount()
 		result+=sum/2;
 	}
 	
-	salesumpoints	= result*rats;			// сумма очков
-	salearmor		= salesumpoints/4;		// нужно для 1-го навыка
-	saleskills		= (salesumpoints/4)*3;	// нужно для 4-х навыков
-	salesumarmor	= (rats*point)/4;		// получится для 1-го навыка
+	salesumpoints	= result*rats;		// сумма очков
+	salearmor	= salesumpoints/4;	// нужно для 1-го навыка
+	saleskills	= (salesumpoints/4)*3;	// нужно для 4-х навыков
+	salesumarmor	= (rats*point)/4;	// получится для 1-го навыка
 	salesumskills	= ((rats*point)/4)*3;	// получится для 4-х навыков
 }
 void Skills::show_alternative_discount() // SHOW
