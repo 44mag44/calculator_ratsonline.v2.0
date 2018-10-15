@@ -12,12 +12,12 @@ using namespace std;
 class Skills
 {
 private:
-	int point;			// ввод умений для одной крысы
-	int rats;			// ввод кол-ва крыс
-	int result;			// кол-во очков умений
+	int point;		// ввод умений для одной крысы
+	int rats;		// ввод кол-ва крыс
+	int result;		// кол-во очков умений
 	int sumpoints;		// сумма	
-	int armor;			// Нужно защита
-	int skills;			// Нужно воровство/атака			
+	int armor;		// Нужно защита
+	int skills;		// Нужно воровство/атака			
 	int sumarmor;		// Получится защиты
 	int sumskills;		// Получится воровство/атакая
 	int salesumpoints;	// сумма очков умений (АКЦИЯ)
@@ -34,15 +34,15 @@ public:
 	bool inputdata();
 
 	// в 4 умения
-	void four_skills(); 			//игра в 4 умения
+	void four_skills(); 		//игра в 4 умения
 	void four_skills_discount(); 	//игра в 4 умения скидка на умения
-	void show_four();				//показать - 4 умения
-	void show_four_discount();		//показать - скидка на умения
+	void show_four();		//показать - 4 умения
+	void show_four_discount();	//показать - скидка на умения
 
 	// Альтернативный
-	void alternative(); 				//игра Альтернативную
+	void alternative(); 			//игра Альтернативную
 	void alternative_discount(); 		//игра Альтер. скидка на умения
-	void show_alternative();			//показать - Альтер.
+	void show_alternative();		//показать - Альтер.
 	void show_alternative_discount();	//показать - Альтер. скидка на умения
 };
 #endif
