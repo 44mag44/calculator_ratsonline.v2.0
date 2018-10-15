@@ -32,5 +32,4 @@ public:
 	void silica_8();	// Силище + Татем
 	void freeday_8();	// Свобоный день
 };
-
 #endif

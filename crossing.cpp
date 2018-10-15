@@ -4,44 +4,44 @@
 #include "crossing.h"
 
 ////////////////////////////////////////////////////////////////////////////////
-/*								Конструктор									  */
+/*				Конструктор				      */
 ////////////////////////////////////////////////////////////////////////////////
 Crossing::Crossing()
 {
-	sumdevil16		= 0;	// сердец для 16 дьявола
-	sumdevil18		= 0;	// сердец для 18 дьявола
-	sumdevil19		= 0;	// сердец для 19 дьявола
-	sumdevil20		= 0;	// сердец для 20 дьявола
-	sumdevilmax		= 0;	// сердец для макс.дьявола
+	sumdevil16	= 0;	// сердец для 16 дьявола
+	sumdevil18	= 0;	// сердец для 18 дьявола
+	sumdevil19	= 0;	// сердец для 19 дьявола
+	sumdevil20	= 0;	// сердец для 20 дьявола
+	sumdevilmax	= 0;	// сердец для макс.дьявола
 	sumvampire21	= 0;	// сердец для вампира 21 уровня
 	sumvampire22	= 0;	// сердец для вампира 22 уровня
 	sumvampire23	= 0;	// сердец для вампира 23 уровня
 	sumvampire24	= 0;	// сердец для вампира 24 уровня
 	sumvampire25	= 0;	// сердец для вампира 25 уровня
 	sumvampiremax	= 0;	// сердец для макс.вампира
-	sumjoker		= 0;	// сердец для первого джокера
+	sumjoker	= 0;	// сердец для первого джокера
 };
 
 ////////////////////////////////////////////////////////////////////////////////
-/*							Седьмые пеленки									  */ 
+/*				Седьмые пеленки				      */ 
 ////////////////////////////////////////////////////////////////////////////////
 void Crossing::silica_7() // Силище, скрещивание
 {
-	int angel11		= 60;	// 7+7+7=11 >> 28+32=60
-	int angel13		= 88;	// 11+11=13
-	int devil16		= 104;	// 13+13=16
-	int devil18		= 288;	// 16+16=18
-	int devil20		= 324;	// 18+18=20
+	int angel11	= 60;	// 7+7+7=11 >> 28+32=60
+	int angel13	= 88;	// 11+11=13
+	int devil16	= 104;	// 13+13=16
+	int devil18	= 288;	// 16+16=18
+	int devil20	= 324;	// 18+18=20
 	int devilmax20	= 324;	// 20+16=20
 	int vampire22	= 360;	// 20+20=22 >> devilmax20 + devilmax20
 
-	sumdevil16		= (angel11*4)+(angel13*2)+devil16;		//	16 дьявол
-	sumdevil18		= (sumdevil16*2)+devil18;				//	18 дьявол 
-	sumdevil20		= (sumdevil18*2)+devil20;				//	20 дьявол	
-	sumdevilmax 	= (sumdevil20+sumdevil16)+devilmax20;	//	+20 дьявол
-	sumvampire22	= (sumdevilmax*2)+vampire22;			//	22 вампир
+	sumdevil16	= (angel11*4)+(angel13*2)+devil16;	// 16 дьявол
+	sumdevil18	= (sumdevil16*2)+devil18;		// 18 дьявол 
+	sumdevil20	= (sumdevil18*2)+devil20;		// 20 дьявол	
+	sumdevilmax 	= (sumdevil20+sumdevil16)+devilmax20;	// +20 дьявол
+	sumvampire22	= (sumdevilmax*2)+vampire22;		// 22 вампир
 
-	cout << "---------------------------------------------------------" << endl;
+	cout << "-----------------------------------------------------" << endl;
 	cout << "\t\t- Силища. 7 пеленки -" << endl;
 	cout << "Кол-во сердец >\t\t Обычный|Брач.пора" << endl;	
 	cout << "Дьявол\t16 ур.  (12кр.)\t-> " << sumdevil16 
@@ -65,20 +65,20 @@ void Crossing::silica_7() // Силище, скрещивание
 
 void Crossing::freeday_7() // Свобоный день
 {
-	int royal10		= 29;	// 7+7+7=10
-	int angel12		= 20;	// 12 angel 
-	int angel14		= 48;	// 12+12=14
-	int devil16		= 56;	// 14+14=16
-	int devil19		= 144;	// 16+16=19
+	int royal10	= 29;	// 7+7+7=10
+	int angel12	= 20;	// 12 angel 
+	int angel14	= 48;	// 12+12=14
+	int devil16	= 56;	// 14+14=16
+	int devil19	= 144;	// 16+16=19
 	int devilmax20	= 171;	// 19+19=20
 	int vampire22	= 180;	// 20+20=22
 
-	sumdevil16		= (royal10*8)+(angel12*4)+(angel14*2)+devil16;	// 16 дьявол
-	sumdevil19		= (sumdevil16*2)+devil19;						// 19 дьявол
-	sumdevilmax 	= (sumdevil19*2)+devilmax20;					// 20 дьявол
-	sumvampire22	= (sumdevilmax*2)+vampire22;					// 22 вампир
+	sumdevil16	= (royal10*8)+(angel12*4)+(angel14*2)+devil16;	// 16 дьявол
+	sumdevil19	= (sumdevil16*2)+devil19;			// 19 дьявол
+	sumdevilmax 	= (sumdevil19*2)+devilmax20;			// 20 дьявол
+	sumvampire22	= (sumdevilmax*2)+vampire22;			// 22 вампир
 
-	cout << "---------------------------------------------------------" << endl;
+	cout << "-----------------------------------------------------" << endl;
 	cout << "\t\t- 7 пеленки -" << endl;
 	cout << "Кол-во сердец >\t\t Обычный|Брач.пора" << endl;
 	cout << "Дьявол\t16 ур. (24кр.)\t-> " << 2*sumdevil16 
@@ -96,27 +96,27 @@ void Crossing::freeday_7() // Свобоный день
 	cout << " 19 ->\t16+16=19(48)" << endl;
 	cout << " 20 ->\t19+19=20(96)" << endl;
 	cout << " 22 ->\t20+20=22(192)" << endl;
-	cout << "---------------------------------------------------------" << endl;
+	cout << "-----------------------------------------------------" << endl;
 }
 
 ////////////////////////////////////////////////////////////////////////////////
-/*								 Восмые пеленки								  */ 
+/*				 Восмые пеленки				      */ 
 ////////////////////////////////////////////////////////////////////////////////
 void Crossing::silica_8()	// В Тотем
 {
-	int royal10		= 32;	// 8+8=10
-	int angel13		= 40;	// 10+10=13 
-	int angel15		= 104;	// 13+13=15
-	int devil18		= 120;	// 15+15=18
-	int totem20		= 324;	// 18+18=20
+	int royal10	= 32;	// 8+8=10
+	int angel13	= 40;	// 10+10=13 
+	int angel15	= 104;	// 13+13=15
+	int devil18	= 120;	// 15+15=18
+	int totem20	= 324;	// 18+18=20
 	
 	int sumdevil18	= 0;	//sum 18 divel
-	int totem		= 0;	//sum 20 divel
+	int totem	= 0;	//sum 20 divel
 		
-	sumdevil18 = (royal10*8)+(angel13*4)+(angel15*2)+devil18;	// 18 дьявлол
-	totem = (sumdevil18*2) + totem20;							// 20 дьявол
+	sumdevil18 = (royal10*8)+(angel13*4)+(angel15*2)+devil18;// 18 дьявлол
+	totem = (sumdevil18*2) + totem20;			 // 20 дьявол
 	
-	cout << "---------------------------------------------------------" << endl;
+	cout << "-----------------------------------------------------" << endl;
 	cout << "\t- Силища. Тотем. 8 пеленки -" << endl;
 	cout << "Кол-во сердец >\t\t Обычный|Брач.пора" << endl;
 	cout << "Дьявол\t18 ур. (16кр.)\t-> " << sumdevil18	<< "\t| " 
@@ -142,20 +142,20 @@ void Crossing::freeday_8()	// Свобоный день
 	int vampire24		= 704;	// 22+22=24
 	int maxvampire25	= 752;	// 24+23=25
 
-	int joker28			= 800;	// 25+25=28 	
+	int joker28		= 800;	// 25+25=28 	
 	
-	sumdevil16		= (angel12*4)+(angel14*2)+devil16;			// 16 дьявол
-	sumdevil18		= (sumdevil16*2)+devil18;					// 18 дьявол
-	sumdevilmax	  	= (sumdevil18*2)+devil20;					// 20 дьявол
-	sumvampire22	= (sumdevilmax*2)+vampire22;				// 22 вампир
-	sumvampire24	= (sumvampire22*2)+vampire24;				// 24 вампир
-	sumvampire21  	= (sumdevilmax+sumdevil16)+vampire21;		// 21 вампир
-	sumvampire23  	= (sumvampire21*2)+vampire23;				// 23 вампир	
+	sumdevil16	= (angel12*4)+(angel14*2)+devil16;		// 16 дьявол
+	sumdevil18	= (sumdevil16*2)+devil18;			// 18 дьявол
+	sumdevilmax	= (sumdevil18*2)+devil20;			// 20 дьявол
+	sumvampire22	= (sumdevilmax*2)+vampire22;			// 22 вампир
+	sumvampire24	= (sumvampire22*2)+vampire24;			// 24 вампир
+	sumvampire21	= (sumdevilmax+sumdevil16)+vampire21;		// 21 вампир
+	sumvampire23	= (sumvampire21*2)+vampire23;			// 23 вампир	
 	sumvampiremax	= (sumvampire23+sumvampire24)+maxvampire25;	//+25 вампир
-	sumjoker		= (sumvampiremax*2)+joker28;				// 28 джокер 
+	sumjoker	= (sumvampiremax*2)+joker28;			// 28 джокер 
 
 
-	cout << "---------------------------------------------------------" << endl;
+	cout << "-----------------------------------------------------" << endl;
 	cout << "\t\t- 8 пеленки -" << endl;
 	cout << "Кол-во сердец >\t\t  Обычный|Брач.пора" << endl;
 	cout << "Дьявол\t16 ур. (16кр.)\t-> " << sumdevil16	<< "\t | " 
@@ -188,7 +188,7 @@ void Crossing::freeday_8()	// Свобоный день
 	cout << " 23 ->\t21+21=23 (160)\t->262x\n";
 	cout << " 25 ->\t24+23=25 (416)\t->2x\n";
 	cout << " 28 ->\t25+25=28 (832)\t->337x\n";
-	cout << "---------------------------------------------------------" << endl;
+	cout << "-----------------------------------------------------" << endl;
 
 }
 ////////////////////////////////////////////////////////////////////////////////
@@ -197,7 +197,7 @@ void Crossing::freeday_8()	// Свобоный день
 void Crossing::inputdata()
 {
 	char ask; // Показать таблицу скрещивания?
-	cout << "---------------------------------------------------------" << endl;
+	cout << "-----------------------------------------------------" << endl;
 	cout << "Показать схемы скрещиваний? (y|n): ";
 	cin >> ask;
 
@@ -219,7 +219,7 @@ void Crossing::inputdata()
 			if(cross == '8')
 			{	
 				// варианты скрещиваний для ВОСЬМЫХ пеленок	
-				silica_8();		// силища
+				silica_8();	// силища
 				freeday_8();	// свободный
 				break;
 			}
@@ -248,5 +248,4 @@ void Crossing::inputdata()
 	}
 
 }
-
 #endif
