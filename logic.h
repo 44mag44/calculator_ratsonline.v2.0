@@ -18,5 +18,4 @@ void play ()
 	cross.inputdata();
 
 }
-
 #endif
