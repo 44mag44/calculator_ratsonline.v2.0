@@ -209,4 +209,4 @@ bool Skills::inputdata()
 
 	return false;
 }
-#endif 
+#endif
