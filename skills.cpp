@@ -69,18 +69,18 @@ void Skills::show_four() // SHOW
 	// Вывод в терминал
 	cout << "-----------------------------------------------------" << endl;
 	cout << "Универсальная крыса ->" << endl;
-	cout << "\t\tКража\t" << "Добыча\t" << "Защита\t" << "Атака\t" << endl;
+	cout << "\t\tКража\t" << "Добыча\t" << "Защита\t" << "Атака\t" << "  Всего\n";
 	cout << "Нужно >\t\t" << armor << "\t" << armor << "\t" << armor 
-		<< "\t" << armor << endl; 
+		<< "\t" << armor << "\t  " << armor*4 << endl; 
 	cout << "Итого >\t\t" << sumarmor << "\t" << sumarmor << "\t" 
-		<< sumarmor << "\t" << sumarmor << endl; 
+		<< sumarmor << "\t" << sumarmor << "\t  " << sumarmor*4 << endl; 
 
 	// Запись в файл
 	fout << "-----------------------------------------------------" << endl;
 	fout << "\t\tУниверсальная крыса: ";
-	fout << "Кражи " << "Добычи " << "Защиты " << "Атаки" << endl;
-	fout << "Нужно по > \t" << armor << endl; 
-	fout << "Итого по > \t" << sumarmor << endl;
+	fout << "Кражи " << "Добычи " << "Защиты " << "Атаки" << "  Всего\n" << endl;
+	fout << "Нужно по > \t" << armor << "\t  " << armor*4 << endl; 
+	fout << "Итого по > \t" << sumarmor << "\t  " << sumarmor*4 << endl;
 }
 
 			// В АКЦИЮ "Крысы на прокачку" //
@@ -105,14 +105,15 @@ void Skills::show_four_discount() // SHOW
 	// Вывод в терминал
 	cout << "Крысы на прокачку" << endl;
 	cout << "\t\t" << salearmor << "\t" << salearmor << "\t" << salearmor << "\t" 
-		<< salearmor << endl; 
+		<< salearmor << "\t  " << salearmor*4 << endl; 
 	cout << "\t\t" << salesumarmor << "\t" << salesumarmor << "\t" 
-		<< salesumarmor << "\t" << salesumarmor << endl; 
+		<< salesumarmor << "\t" << salesumarmor << "\t  " << salesumarmor*4
+		<< endl; 
 		
 	// Запись в файл
 	fout << "*Крысы на прокачку*" << endl;
-	fout << "Нужно по > \t" << salearmor << endl; 
-	fout << "Итого по > \t" << salesumarmor << endl;
+	fout << "Нужно по > \t" << salearmor << "\n  " << salearmor*4 << endl; 
+	fout << "Итого по > \t" << salesumarmor << "\n  " << salesumarmor*4 << endl;
 }
 ////////////////////////////////////////////////////////////////////////////////
 /*-----------------------------Вывод всей информации--------------------------*/
